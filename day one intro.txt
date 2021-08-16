@@ -1,0 +1,68 @@
+Web applications:
+java	>> Spring, hibernate
+php
+dot net	>> Entity frameworks,...
+python	>> Flask, Django
+ruby on rails
+
+javascript
+1. validation & verification
+2. conversion and other events
+
+
+
+Frameworks:
+Front end: Angular, React, Vue	>> Presentation logic(UI)
+Backend: Express	>>  Business
+Database: Mongodb>> No SQL>> documents/ collections>> data access logic
+
+
+
+Front end developer:
+HTML
+CSS
+JS
+
+Bootstrap>> css framework
+
+
+Javascript:
+
+Document
+
+store data:
+let/ const/ var
+
+data types:
+Number
+String
+Boolean
+Object
+Array
+JSON
+.
+.
+
+Operations:
+functions:
+inbuilt 
+user defined
+
+<script>
+	
+</script>
+
+inline		>> within html tag
+internal	>> head section of the html document
+external	>> separate .js file, linke to html using <script src="url"></script>
+
+
+Visual Studio Code: editors
+
+
+Basics: var, functions
+Array:
+JSON
+parsings
+fat arrow functions
+
