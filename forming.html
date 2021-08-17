@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Input ways</title>
+        <script>
+            <!--
+                function milage()
+                {
+                    alert('function called')
+                    var km=document.forms['bangalore'].kms.value;
+                    var petrol=document.forms['bangalore'].fuel.value;
+                    var out=document.forms['bangalore'].result;
+                    out.value=""+(km/petrol);
+                }
+            //-->
+        </script>
+    </head>
+    <body>
+        <noscript>
+            Javascript is not available
+        </noscript>
+        <form name="bangalore">
+            <input type="text" name="kms" placeholder="Kilometers"><br/>
+            <input type="text" name="fuel" placeholder="Fuel">
+            <input type="button" value="Get Milage" onclick="milage()">
+            <output name="result"></output>
+        </form>
+    </body>
+</html>
