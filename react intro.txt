@@ -1,0 +1,84 @@
+Javascript:
+
+Angular
+Vue
+Express
+React
+Node
+
+
+Presentations/ Front end: Angular/React/Vue
+Business/ back end: Express
+
+
+
+
+Databases:
+MySQL
+MS SQL
+NO SQL>> Mongodb atlas
+
+
+
+1. Node
+visit nodejs.org to download current node version
+install node
+check PATH environment variable
+check node in command prompt:
+node --version
+npm --version
+
+
+2. React
+visit npmjs.com and search "create-react-app"
+open command prompt:
+npm install -g create-react-app
+
+
+
+
+Project:
+public	>> index.html, ico, images,....
+src	>> javascript files>> .js>> .jsx, css, index.js, App.js
+node_modules >> libraries
+package.json >> config>> name, depenendies, start
+package-lock.json >> ignore
+
+
+React
+bootstrap
+Material-UI
+.
+.
+.
+
+
+
+Projects:
+npm init		basic project
+npm init -y		basic project with package.json
+
+create-react-app "appname"
+
+
+npm start
+node File.js
+
+
+Component/js/Java Script eXtension/ Java Script XML:			Page/ html
+<input onClick="">			    				<input onclick="">
+
+
+1. babel	>> ES6>> basic javascript
+2. webpack	>> bundle our required stuffs
+
+
+
+react:JSX
+
+
+react-dom:
+render(jsx desired to display,target/ where to display)
+redirect
+
+manage components>> js/jsx
