@@ -82,3 +82,30 @@ render(jsx desired to display,target/ where to display)
 redirect
 
 manage components>> js/jsx
+
+
+
+
+
+index.html
+
+index.js>>
+
+Components:
+
+js/jsx>>
+
+Class Components:
+export class Identifier extends Componets
+{
+
+}
+
+Functional Components:
+syntax:
+
+const Identifier=()=>{
+
+}
+
+export Identifier
