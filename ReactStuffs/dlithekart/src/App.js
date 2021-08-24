@@ -1,9 +1,10 @@
+import Login from "./Login"
 import SignUp from "./SignUp"
 
 const App=()=>{
   return(
     <>
-      <SignUp/>
+      <Login/>
     </>
   )
 }

@@ -24,6 +24,45 @@ const SignUp=()=>{
         })
     }
 
+    const create=()=>{
+        let yet=new Array();
+        const txt=localStorage.getItem("profiles")
+        yet=JSON.parse(txt)
+        if(account.pass===account.conpass)
+        {
+            yet.push(account)
+            const wet=JSON.stringify(yet)
+            localStorage.setItem("profiles",wet)
+            cancel()
+            alert("Profile has created");
+        }
+        else
+        {
+            alert("Password mismatch");
+        }
+    }
+
+    const cancel=()=>{
+        setAccount(()=>{
+            return{
+                username:"",
+                contact:0,
+                email:"",
+                pass:"",
+                conpass:""
+            }
+        })
+    }
+
+    /* const listUsers=()=>{
+        let yet=new Array();
+        const txt=localStorage.getItem("profiles")
+        yet=JSON.parse(txt)
+        yet.map((data)=>{
+            alert(data.username)
+        })
+    } */
+
     return(
         <>
             <div className="container-fluid">
@@ -76,12 +115,15 @@ const SignUp=()=>{
                             />
                         </div>
                         <div className="row justify-content-around">
-                            <Button variant="outlined" color="primary" className="col">
+                            <Button variant="outlined" color="primary" className="col" onClick={create}>
                                 SignUp
                             </Button>
-                            <Button variant="outlined" color="secondary" className="col">
+                            <Button variant="outlined" color="secondary" className="col" onClick={cancel}>
                                 Cancel
                             </Button>
+                            {/* <Button variant="outlined" color="secondary" className="col" onClick={listUsers}>
+                                List
+                            </Button> */}
                         </div>
                     </div>
                 </div>
