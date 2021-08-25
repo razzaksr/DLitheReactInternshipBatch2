@@ -5,11 +5,14 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import SignUp from './SignUp';
+import {user} from './App';
 
 const Login=()=>{
+
+    const [users,setUsers]=useContext(user)
 
     const[showPass,setShowPass]=useState(false)
 
@@ -35,7 +38,8 @@ const Login=()=>{
         {
             if(arr[pos].username===info.username&&arr[pos].pass===info.pass)
             {
-                alert("Successful login")
+                setUsers(info.username)
+                alert("Successful login "+users)
                 cancel()
                 return;
             }
@@ -71,10 +75,7 @@ const Login=()=>{
         setShowPass(false)
       };
 
-      const navigate=(e)=>{
-          e.preventDefault()
-          return <SignUp/>
-      }
+      
     return(
         <>
             <div className="container-fluid">
@@ -117,7 +118,7 @@ const Login=()=>{
                                 Cancel
                             </Button>
                         </div>
-                        <a className="btn btn-info float-end" onClick={navigate}>Create New User</a>
+                        <a className="float-end" href="/signup">Create New User</a>
                     </div>
                 </div>
             </div>
