@@ -12,7 +12,7 @@ import {user} from './App';
 
 const Login=()=>{
 
-    const [users,setUsers]=useContext(user)
+    const[person,setPerson]=useContext(user)
 
     const[showPass,setShowPass]=useState(false)
 
@@ -38,9 +38,13 @@ const Login=()=>{
         {
             if(arr[pos].username===info.username&&arr[pos].pass===info.pass)
             {
-                setUsers(info.username)
-                alert("Successful login "+users)
+                setPerson(info.username)
+
+                
+
+                alert("Successful login "+person)
                 cancel()
+                //window.location.assign("/")
                 return;
             }
         }

@@ -1,4 +1,4 @@
-import react from 'react';
+import react, { useState } from 'react';
 import { createContext, useContext } from "react"
 import { Route, Switch } from "react-router-dom"
 import Home from "./Home"
@@ -6,12 +6,13 @@ import Login from "./Login"
 import Menu from "./Menu"
 import SignUp from "./SignUp"
 
-export let user=react.createContext()
+export const user=react.createContext()
 
 const App=()=>{
+  const[person,setPerson]=useState("")
   return(
     <>
-      <user.Provider value="">
+      <user.Provider value={[person,setPerson]}>
         <Menu/>
         <Switch>
           <Route path="/" exact component={()=><Home/>}/>
