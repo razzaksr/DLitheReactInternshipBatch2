@@ -2,6 +2,33 @@ import { beanbags, shoes } from "./Items";
 
 const Home=()=>{
 
+    const person=localStorage.getItem('who')
+
+    const wishing=(obj)=>{
+        //alert("about to add in wishlist "+obj.brand)
+
+        if(person!=="")
+        {
+            let txt=localStorage.getItem('wishlist')
+            let lists=JSON.parse(txt)
+            lists.push({
+                item:obj,
+                user:person
+            })
+            txt=JSON.stringify(lists)
+            localStorage.setItem('wishlist',txt)
+            alert(person+" has added "+obj.brand+" to their wishlist")
+        }
+        else{
+            alert("Please login first")
+            window.location.assign("/login")
+        }
+    }
+
+    const karting=(obj)=>{
+        alert("about to add in kart "+obj.brand)
+    }
+
     const boxstyle={
         minWidth:'300px',
         minHeight:'300px',
@@ -22,6 +49,8 @@ const Home=()=>{
                                     <p className="card-text text-success">Colors {data.colors}</p>
                                     <p className="card-text text-warning">Type {data.type}</p>
                                     <p className="card-text text-danger">Price {data.cost}</p>
+                                    <input type="button" className="btn btn-danger float-start" onClick={()=>wishing(data)} value="To wishlist"/>
+                                    <input type="button" className="btn btn-danger float-end" onClick={()=>karting(data)} value="To kart"/>
                                 </div>
                             </div>
                         ))
@@ -38,6 +67,8 @@ const Home=()=>{
                                     <h1 className="card-title text-primary">{data.brand}</h1>
                                     <p className="card-text text-success">Colors {data.size}</p>
                                     <p className="card-text text-danger">Price {data.cost}</p>
+                                    <input type="button" className="btn btn-danger float-start" onClick={()=>wishing(data)} value="To wishlist"/>
+                                    <input type="button" className="btn btn-danger float-end" onClick={()=>karting(data)} value="To kart"/>
                                 </div>
                             </div>
                         ))

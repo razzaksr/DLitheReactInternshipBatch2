@@ -9,10 +9,14 @@ import { useContext, useState } from 'react';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import SignUp from './SignUp';
 import {user} from './App';
+import { begin } from './Logged';
+import { useHistory } from 'react-router-dom';
 
 const Login=()=>{
 
-    const[person,setPerson]=useContext(user)
+    const hist=useHistory()
+
+    //const[person,setPerson]=useContext(user)
 
     const[showPass,setShowPass]=useState(false)
 
@@ -38,13 +42,12 @@ const Login=()=>{
         {
             if(arr[pos].username===info.username&&arr[pos].pass===info.pass)
             {
-                setPerson(info.username)
-
-                
-
-                alert("Successful login "+person)
+                //setPerson(info.username)
+                //alert("Successful login "+person)
+                begin(info.username)
                 cancel()
-                //window.location.assign("/")
+                window.location.assign("/")
+                //hist.push("/")
                 return;
             }
         }
