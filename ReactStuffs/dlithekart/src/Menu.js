@@ -7,6 +7,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import HomeIcon from '@material-ui/icons/Home';
 import InputIcon from '@material-ui/icons/Input';
+import PersonIcon from '@material-ui/icons/Person';
 import { end } from "./Logged";
 
 const Menu=()=>{
@@ -40,6 +41,9 @@ const Menu=()=>{
                                     </Nav.Link>
                                     <Nav.Link href="#" onClick={check} className="me-3 text-dark btn btn-outline-primary">
                                         <MeetingRoomIcon color="secondary"></MeetingRoomIcon>
+                                    </Nav.Link>
+                                    <Nav.Link href="/editpro" className="me-3 text-dark btn btn-outline-primary">
+                                        <PersonIcon color="secondary"></PersonIcon>
                                     </Nav.Link>
                             </>
                             :

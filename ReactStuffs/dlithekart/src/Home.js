@@ -2,6 +2,8 @@ import { beanbags, shoes } from "./Items";
 
 const Home=()=>{
 
+    
+
     const person=localStorage.getItem('who')
 
     const wishing=(obj)=>{

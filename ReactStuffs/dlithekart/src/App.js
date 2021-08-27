@@ -8,6 +8,7 @@ import SignUp from "./SignUp"
 import {begin, end} from './Logged'
 import Wishlist from './Wishlist';
 import Kart from './Kart';
+import EditProfile from './EditProfile';
 
 export const user=react.createContext()
 
@@ -17,6 +18,11 @@ const App=()=>{
   localStorage.setItem('kart',JSON.stringify(hai)) */
   //end()
   //begin('Razak')
+
+  /* let yet=new Array()
+  const wet=JSON.stringify(yet)
+  localStorage.setItem("profiles",wet) */
+
   const[person,setPerson]=useState("")
   return(
     <>
@@ -28,6 +34,7 @@ const App=()=>{
           <Route path="/signup" exact component={()=><SignUp/>}/>
           <Route path="/wish" exact component={()=><Wishlist/>}/>
           <Route path="/kart" exact component={()=><Kart/>}/>
+          <Route path="/editpro" exact component={()=><EditProfile/>}/>
         </Switch>
       </user.Provider>
     </>
